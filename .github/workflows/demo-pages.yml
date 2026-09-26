@@ -37,6 +37,8 @@ jobs:
         env:
           BASE_PATH: /put-volshebnika/
           VITE_DEMO_MODE: "1"
+      - name: Create SPA fallback (404.html)
+        run: cp apps/wizard-path/dist/public/index.html apps/wizard-path/dist/public/404.html
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
